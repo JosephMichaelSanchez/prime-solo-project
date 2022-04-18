@@ -68,6 +68,13 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows PodQuestionPage else shows LoginPage
+            exact
+            path="/podquestionpage"
+          >
+            <PodQuestionPage />
+          </ProtectedRoute>
 
           <Route
             exact

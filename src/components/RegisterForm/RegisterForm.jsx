@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function RegisterForm() {
   const [username, setUsername] = useState('');
@@ -11,6 +12,7 @@ function RegisterForm() {
   const [email, setEmail] = useState('');
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const registerUser = (event) => {
     event.preventDefault();
@@ -22,12 +24,14 @@ function RegisterForm() {
         password: password,
         firstName: firstName,
         lastName: lastName,
-        address: address, 
+        address: address,
         phone: phone,
         email: email
 
       },
     });
+
+    history.push('/podquestionpage');
   }; // end registerUser
 
   return (
