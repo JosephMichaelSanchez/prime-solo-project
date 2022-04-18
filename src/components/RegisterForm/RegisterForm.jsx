@@ -69,7 +69,7 @@ function RegisterForm() {
           <label htmlFor="firstName">
             First Name:
             <input
-              type="firstName"
+              type="text"
               name="firstName"
               value={firstName}
               required
@@ -81,7 +81,7 @@ function RegisterForm() {
           <label htmlFor="lastName">
             Last Name:
             <input
-              type="lastName"
+              type="text"
               name="lastName"
               value={lastName}
               required
@@ -93,7 +93,7 @@ function RegisterForm() {
           <label htmlFor="address">
             Address:
             <input
-              type="address"
+              type="text"
               name="address"
               value={address}
               required
@@ -105,7 +105,7 @@ function RegisterForm() {
           <label htmlFor="phone">
             Phone #:
             <input
-              type="phone"
+              type="text"
               name="phone"
               value={phone}
               required
@@ -117,7 +117,7 @@ function RegisterForm() {
           <label htmlFor="email">
             Email:
             <input
-              type="email"
+              type="text"
               name="email"
               value={email}
               required
