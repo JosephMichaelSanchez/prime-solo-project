@@ -8,9 +8,16 @@ function PodJoinConfirmationPage() {
     const history = useHistory();
 
     const podName = useSelector(store => store.podReducer.pod_name)
+    const podId = useSelector(store => store.podReducer.id)
 
     const handleSubmit = () => {
         console.log(podName);
+        console.log(podId);
+
+        dispatch({
+            type: 'JOIN_POD',
+            payload: podId
+        })
     }
 
     return (
