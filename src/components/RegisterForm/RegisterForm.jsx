@@ -22,6 +22,9 @@ function RegisterForm() {
         password: password,
         firstName: firstName,
         lastName: lastName,
+        address: address, 
+        phone: phone,
+        email: email
 
       },
     });
