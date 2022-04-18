@@ -1,8 +1,11 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
+const {
+    rejectUnauthenticated,
+  } = require('../modules/authentication-middleware');
 
-router.get('/:key_code', (req, res) => {
+router.get('/:key_code', rejectUnauthenticated, (req, res) => {
     console.log(req.params.key_code);
     
     const query = `SELECT * FROM pods WHERE "key_code" = $1`;
