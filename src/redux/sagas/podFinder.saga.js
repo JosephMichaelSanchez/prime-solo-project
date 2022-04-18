@@ -6,7 +6,7 @@ function* podFinderSaga() {
 }
 
 function* getPod(action) {
-    console.log('in getPod');
+    console.log('in getPod saga');
     
     const keyCode = action.payload
     try {
