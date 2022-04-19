@@ -10,7 +10,8 @@ const passport = require('./strategies/user.strategy');
 // Route includes
 const userRouter = require('./routes/user.router');
 const podRouter = require('./routes/pod.router');
-const joinRouter = require('./routes/join.router')
+const joinRouter = require('./routes/join.router');
+const mainPodRouter = require('./routes/mainpod.router');
 
 
 // Body parser middleware
@@ -27,7 +28,8 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/api/pod', podRouter);
-app.use('/api/join', joinRouter)
+app.use('/api/join', joinRouter);
+app.use('/api/mainpod', mainPodRouter);
 
 // Serve static files
 app.use(express.static('build'));
