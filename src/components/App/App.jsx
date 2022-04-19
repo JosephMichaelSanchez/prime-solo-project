@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import PodQuestionPage from '../PodQuestionPage/PodQuestionPage';
 import PodJoinConfirmationPage from '../PodJoinConfirmationPage/PodJoinConfirmationPage'
+import MainPodPage from '../MainPodPage/MainPodPage';
 
 import './App.css';
 
@@ -82,6 +83,13 @@ function App() {
             path="/podjoinconfirmation"
           >
             <PodJoinConfirmationPage />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows MainPodPage else shows LoginPage
+            exact
+            path="/mainpodpage"
+          >
+            <MainPodPage />
           </ProtectedRoute>
 
           <Route

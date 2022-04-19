@@ -23,6 +23,8 @@ function PodJoinConfirmationPage() {
                 podId: podId
             }
         })
+
+        
     }
 
     return (
