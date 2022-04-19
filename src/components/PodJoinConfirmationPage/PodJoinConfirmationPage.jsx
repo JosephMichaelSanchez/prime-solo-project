@@ -23,8 +23,8 @@ function PodJoinConfirmationPage() {
                 podId: podId
             }
         })
+        history.push('/mainpodpage');
 
-        
     }
 
     return (

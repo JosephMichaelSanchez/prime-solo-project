@@ -18,7 +18,7 @@ function PodQuestionPage() {
             payload: keyCode
         })
 
-        history.push('/podjoinconfirmation')
+        history.push('/podjoinconfirmation');
     }
 
     return (
