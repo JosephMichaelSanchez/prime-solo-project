@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 function MainPodPage() {
     const dispatch = useDispatch();
     const user = useSelector(store => store.user);
+    const podList = useSelector(store => store.mainPodReducer);
 
     useEffect(() => {
         dispatch({
@@ -18,6 +19,11 @@ function MainPodPage() {
             <div className="title">
                 <h2>MAIN POD PAGE</h2>
                 <h3>{user.pod_id}</h3>
+                <ul>
+                    {podList.map((user, i) => (
+                        <li key={i}>{user.first_name}</li>
+                    ))}
+                </ul>
             </div>
         </>
     )
