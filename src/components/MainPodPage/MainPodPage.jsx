@@ -19,11 +19,18 @@ function MainPodPage() {
             <div className="title">
                 <h2>MAIN POD PAGE</h2>
                 <h3>{user.pod_id}</h3>
-                <ul>
-                    {podList.map((user, i) => (
-                        <li key={i}>{user.first_name}</li>
+                
+                    {podList.map((member) => (
+                        <div key={member.id}>
+                        <p>{member.first_name}</p>
+                        <p>{member.last_name}</p>
+                        <p>{member.address}</p>
+                        <p>{member.phone}</p>
+                        <p>{member.email}</p>
+
+                        </div>
                     ))}
-                </ul>
+                
             </div>
         </>
     )
