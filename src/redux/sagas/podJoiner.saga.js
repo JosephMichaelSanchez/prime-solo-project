@@ -7,7 +7,14 @@ function* podJoinerSaga () {
 
 function* joinPod(action){
     console.log('in joinPod saga');
+    const newPod = action.payload;
+    console.log(newPod.userId, newPod.podId);
     
+    try {
+    yield axios.put('/api/join', newPod)
+    } catch {
+        console.log('error in PUT');
+        }
 }
 
 export default podJoinerSaga;
