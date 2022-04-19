@@ -10,7 +10,7 @@ function* getUserPod(action) {
     const userPod = action.payload
     try {
         const thePod = yield axios.get(`api/mainpod/${userPod}`)
-        // yield put({type: SET_MAIN_POD, payload: thePod.data})
+        yield put({type: 'SET_MAIN_POD', payload: thePod.data})
         console.log(thePod.data);
         
     } catch {
