@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MainPodPage.css'
 import { useHistory } from 'react-router-dom';
+import PodMember from '../PodMember/PodMember';
 
 function MainPodPage() {
     const dispatch = useDispatch();
@@ -18,19 +19,20 @@ function MainPodPage() {
         <>
             <div className="title">
                 <h2>MAIN POD PAGE</h2>
-                <h3>{user.pod_id}</h3>
-                
+                {/* <h3>{user.pod_id}</h3> */}
+                <div className="podMemberContainer">
                     {podList.map((member) => (
-                        <div key={member.id}>
-                        <p>{member.first_name}</p>
-                        <p>{member.last_name}</p>
-                        <p>{member.address}</p>
-                        <p>{member.phone}</p>
-                        <p>{member.email}</p>
+                        <div key={member.id} className="memberDiv">
+                            <p>{member.first_name}</p>
+                            <p>{member.last_name}</p>
+                            <p>{member.address}</p>
+                            <p>{member.phone}</p>
+                            <p>{member.email}</p>
 
                         </div>
                     ))}
-                
+                </div>
+
             </div>
         </>
     )

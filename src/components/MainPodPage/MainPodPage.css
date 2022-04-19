@@ -2,3 +2,18 @@
     justify-content: center;
     text-align: center;
 }
+
+.podMemberContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+   
+}
+
+.memberDiv {
+    border: 2px solid black;
+    width: 250px;
+    
+    
+}
