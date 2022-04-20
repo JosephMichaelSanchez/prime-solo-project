@@ -22,7 +22,7 @@ function MainPodPage() {
         })
     }, [])
 
-    
+
 
     console.log(podInfo);
     return (
@@ -44,10 +44,9 @@ function MainPodPage() {
                 </div>
 
             </div>
-            <break></break>
             <div className="adminButtons">
                 {user.id == podInfo.admin_id && <button>EDIT POD</button>}
-                {user.id == podInfo.admin_id && <button onClick={() => {history.push('/dateform')}}>ADD DATES</button>}
+                {user.id == podInfo.admin_id && <button onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
             </div>
         </>
     )
