@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import PodQuestionPage from '../PodQuestionPage/PodQuestionPage';
 import PodJoinConfirmationPage from '../PodJoinConfirmationPage/PodJoinConfirmationPage'
 import MainPodPage from '../MainPodPage/MainPodPage';
+import DateForm from '../DateForm/DateForm';
 
 import './App.css';
 
@@ -90,6 +91,13 @@ function App() {
             path="/mainpodpage"
           >
             <MainPodPage />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows DateForm else shows LoginPage
+            exact
+            path="/dateform"
+          >
+            <DateForm />
           </ProtectedRoute>
 
           <Route

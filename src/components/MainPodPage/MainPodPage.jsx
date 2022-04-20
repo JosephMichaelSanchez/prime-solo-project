@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import PodMember from '../PodMember/PodMember';
 
 function MainPodPage() {
+    const history = useHistory();
     const dispatch = useDispatch();
     const user = useSelector(store => store.user);
     const podList = useSelector(store => store.mainPodReducer);
@@ -20,6 +21,8 @@ function MainPodPage() {
             payload: user.pod_id
         })
     }, [])
+
+    
 
     console.log(podInfo);
     return (
@@ -44,7 +47,7 @@ function MainPodPage() {
             <break></break>
             <div className="adminButtons">
                 {user.id == podInfo.admin_id && <button>EDIT POD</button>}
-                {user.id == podInfo.admin_id && <button>ADD DATES</button>}
+                {user.id == podInfo.admin_id && <button onClick={() => {history.push('/dateform')}}>ADD DATES</button>}
             </div>
         </>
     )
