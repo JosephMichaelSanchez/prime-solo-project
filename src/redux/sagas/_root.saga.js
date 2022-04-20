@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import podFinderSaga from './podFinder.saga';
 import podJoinerSaga from './podJoiner.saga';
 import mainPodSaga from './mainPod.saga';
+import podInfoSaga from './podInfo.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -21,5 +22,6 @@ export default function* rootSaga() {
     podFinderSaga(),
     podJoinerSaga(),
     mainPodSaga(),
+    podInfoSaga(),
   ]);
 }

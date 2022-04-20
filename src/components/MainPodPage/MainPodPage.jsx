@@ -14,7 +14,11 @@ function MainPodPage() {
             type: 'GET_USER_POD',
             payload: user.pod_id
         })
-    })
+        dispatch({
+            type: 'GET_POD_INFO',
+            payload: user.pod_id
+        })
+    },[])
     return (
         <>
             <div className="title">

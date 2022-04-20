@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function MemberPod () {
+function PodMember () {
 
     return (
         <>
@@ -9,4 +9,4 @@ function MemberPod () {
 }
 
 
-export default MemberPod;
+export default PodMember;
