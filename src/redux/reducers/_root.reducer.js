@@ -3,6 +3,7 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import podReducer from './pod.reducer.js';
 import mainPodReducer from './mainPod.reducer.js';
+import podInfoReducer from './podInfo.reducer.js';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   podReducer,
   mainPodReducer,
+  podInfoReducer,
 });
 
 export default rootReducer;
