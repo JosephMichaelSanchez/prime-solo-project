@@ -8,6 +8,7 @@ function MainPodPage() {
     const dispatch = useDispatch();
     const user = useSelector(store => store.user);
     const podList = useSelector(store => store.mainPodReducer);
+    const podInfo = useSelector(store => store.podInfoReducer);
 
     useEffect(() => {
         dispatch({
@@ -18,7 +19,9 @@ function MainPodPage() {
             type: 'GET_POD_INFO',
             payload: user.pod_id
         })
-    },[])
+    }, [])
+
+    console.log(podInfo);
     return (
         <>
             <div className="title">
@@ -37,6 +40,11 @@ function MainPodPage() {
                     ))}
                 </div>
 
+            </div>
+            <break></break>
+            <div className="adminButtons">
+                {user.id == podInfo.admin_id && <button>EDIT POD</button>}
+                {user.id == podInfo.admin_id && <button>ADD DATES</button>}
             </div>
         </>
     )

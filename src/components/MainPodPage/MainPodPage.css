@@ -8,12 +8,20 @@
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-   
+    padding-bottom: 50px;
+
 }
 
 .memberDiv {
     border: 2px solid black;
     width: 250px;
-    
-    
+
+
+}
+
+.adminButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
