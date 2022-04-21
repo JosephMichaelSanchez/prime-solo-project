@@ -8,8 +8,8 @@ const {
   router.post('/', rejectUnauthenticated, (req, res) => {
     console.log(req.body.date, req.body.podId);
 
-    const query = `INSERT INTO hosting ("date", "pod_id")
-    VALUES ($1, $2);`;
+    const query = `INSERT INTO hosting ("date", "host", "pod_id")
+    VALUES ($1, 'NEEDS HOST', $2);`;
     const values = [req.body.date, Number(req.body.podId)]
     pool.query(query, values)
         .then(result => {
