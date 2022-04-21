@@ -27,6 +27,10 @@ function MainPodPage() {
         })
     }, [])
 
+    const handleDelete = () => {
+        console.log('clicked DELETE');
+    }
+
 
 
     console.log('the dateList is:', dateList);
@@ -57,6 +61,7 @@ function MainPodPage() {
             {dateList.map((date) => (
                         <div key={date.id} className="dateDiv">
                             <p>{date.date}</p>
+                            {user.id == podInfo.admin_id && <button onClick={handleDelete}>DELETE</button>}
 
                         </div>
                     ))}
