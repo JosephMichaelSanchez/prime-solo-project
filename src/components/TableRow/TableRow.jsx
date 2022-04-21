@@ -16,11 +16,18 @@ function TableRow({ date }) {
 
     }
 
+    const handleRender = () => {
+        if(date.host == 'NEEDS HOST') {
+            return 'NEEDS HOST'
+
+        }
+    }
+
     return (
         <>
             <tr>
                 <td>{date.date}</td>
-                <td>HOST PLACEHOLDER</td>
+                <td>{handleRender()}</td>
                 <td><button onClick={handleDelete}>DELETE</button></td>
             </tr>
         </>
