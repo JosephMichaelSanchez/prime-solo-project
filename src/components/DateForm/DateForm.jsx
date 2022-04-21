@@ -24,33 +24,33 @@ function DateForm() {
     const handleSubmit = () => {
 
         if (newDate.length === 10) {
-        console.log(newDate);
-        
-        const Id = podInfo.id    
-        
-        const newHostingDate = {
-            date: newDate,
-            podId: Id
-        }
+            console.log(newDate);
 
-        console.log(newHostingDate);
+            const Id = podInfo.id
 
-        dispatch({
-            type: 'ADD_NEW_DATE',
-            payload: newHostingDate
-        })
+            const newHostingDate = {
+                date: newDate,
+                podId: Id
+            }
+
+            console.log(newHostingDate);
+
+            dispatch({
+                type: 'ADD_NEW_DATE',
+                payload: newHostingDate
+            })
 
         } else {
-        console.log('not long enough');
+            console.log('not long enough');
         }
 
         setNewDate('');
-        
 
-        
+
+
     }
 
-    
+
 
 
 
@@ -71,7 +71,13 @@ function DateForm() {
                             />
                         </label>
                     </div>
-                    <button onClick={handleSubmit}>ADD DATE</button>
+                    <div>
+                        <button onClick={handleSubmit}>ADD DATE</button>
+                        <div>
+                            <button onClick={() => { history.push('/mainpodpage') }}>BACK TO POD PAGE</button>
+                        </div>
+                    </div>
+
 
                 </form>
             </div>
