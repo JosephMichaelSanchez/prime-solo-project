@@ -9,11 +9,12 @@ const {
 router.delete('/:date', rejectUnauthenticated, (req, res) => {
     console.log(req.params.date);
     
-    const query = `DELETE FROM hosting WHERE "id" = $1`;
+    const query = `DELETE FROM hosting WHERE "id" = $1
+                    RETURNING "pod_id";`;
     const values = [req.params.date]
     pool.query(query, values)
         .then(result => {
-            res.sendStatus(201)           
+            res.send(result.rows[0])           
         })
         .catch(err => {
             console.log('ERROR DELETING DATE IN ROUTER', err);

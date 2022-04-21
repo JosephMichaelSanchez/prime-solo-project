@@ -6,7 +6,7 @@ const {
 } = require('../modules/authentication-middleware');
 
 router.get('/:pod', rejectUnauthenticated, (req, res) => {
-    console.log(req.params.pod);
+    console.log('this is req.params.pod:', Number(req.params));
 
     const query = `SELECT * FROM hosting WHERE "pod_id" = $1`;
     const values = [req.params.pod]

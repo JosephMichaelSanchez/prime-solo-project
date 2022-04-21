@@ -10,8 +10,8 @@ function* deleteDate(action) {
     const date = action.payload;
 
     try {
-        yield axios.delete(`/api/delete/${date}`)
-        yield put({type: 'GET_DATES'})
+        const response = yield axios.delete(`/api/delete/${date}`)
+        yield put({type: 'GET_DATES', payload: response.data.pod_id})
     } catch {
         console.log('ERROR DELETING DATE IN SAGA');
         

@@ -8,6 +8,8 @@ function* getDatesSaga() {
 function* getDates(action) {
     console.log('in GET DATES');
     const pod = action.payload
+    console.log('this is action.payload:', action.payload);
+    
     try {
         const podDates = yield axios.get(`api/dates/${pod}`)
         yield put({type: 'SET_DATES', payload: podDates.data})

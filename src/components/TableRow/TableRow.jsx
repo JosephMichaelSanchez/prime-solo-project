@@ -6,7 +6,7 @@ function TableRow({ date }) {
     const dispatch = useDispatch();
 
     const handleDelete = () => {
-        console.log(date.id);
+        console.log('the date id is', date.id);
 
         dispatch({
             type: 'DELETE_DATE',

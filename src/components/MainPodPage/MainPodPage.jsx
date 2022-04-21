@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MainPodPage.css'
-import { useHistory, } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import PodMember from '../PodMember/PodMember';
 import TableRow from '../TableRow/TableRow';
 
@@ -12,6 +12,9 @@ function MainPodPage() {
     const podList = useSelector(store => store.mainPodReducer);
     const podInfo = useSelector(store => store.podInfoReducer);
     const dateList = useSelector(store => store.setDatesReducer);
+    const {id} = useParams();
+
+    console.log('Id is:', id);
 
     useEffect(() => {
         dispatch({
@@ -24,7 +27,7 @@ function MainPodPage() {
         })
         dispatch({
             type: 'GET_DATES',
-            payload: podInfo.id
+            payload: id
         })
     }, [])
 

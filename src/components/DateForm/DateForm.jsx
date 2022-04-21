@@ -74,7 +74,7 @@ function DateForm() {
                     <div>
                         <button onClick={handleSubmit}>ADD DATE</button>
                         <div>
-                            <button onClick={() => { history.push('/mainpodpage') }}>BACK TO POD PAGE</button>
+                            <button onClick={() => { history.push(`/mainpodpage/${podInfo.id}`) }}>BACK TO POD PAGE</button>
                         </div>
                     </div>
 
