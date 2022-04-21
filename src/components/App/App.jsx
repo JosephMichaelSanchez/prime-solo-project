@@ -88,7 +88,7 @@ function App() {
           <ProtectedRoute
             // logged in shows MainPodPage else shows LoginPage
             exact
-            path="/mainpodpage"
+            path="/mainpodpage/:id"
           >
             <MainPodPage />
           </ProtectedRoute>
