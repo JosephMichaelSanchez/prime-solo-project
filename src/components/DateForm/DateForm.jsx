@@ -25,10 +25,12 @@ function DateForm() {
 
         if (newDate.length === 10) {
         console.log(newDate);
-
+        
+        const Id = podInfo.id    
+        
         const newHostingDate = {
             date: newDate,
-            podId: podInfo.id
+            podId: Id
         }
 
         console.log(newHostingDate);
@@ -41,6 +43,8 @@ function DateForm() {
         } else {
         console.log('not long enough');
         }
+
+        setNewDate('');
         
 
         
@@ -62,7 +66,6 @@ function DateForm() {
                                 type="text"
                                 name="newdate"
                                 value={newDate}
-                                required
                                 placeholder='YYYY/MM/DD'
                                 onChange={(event) => setNewDate(event.target.value)}
                             />
