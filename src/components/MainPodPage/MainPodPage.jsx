@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MainPodPage.css'
 import { useHistory } from 'react-router-dom';
 import PodMember from '../PodMember/PodMember';
+import TableRow from '../TableRow/TableRow';
 
 function MainPodPage() {
     const history = useHistory();
@@ -28,7 +29,7 @@ function MainPodPage() {
     }, [])
 
     const handleDelete = () => {
-        console.log('clicked DELETE');
+        console.log(date.id);
     }
 
 
@@ -58,13 +59,25 @@ function MainPodPage() {
                 {user.id == podInfo.admin_id && <button onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
             </div>
             <div>
-            {dateList.map((date) => (
-                        <div key={date.id} className="dateDiv">
-                            <p>{date.date}</p>
-                            {user.id == podInfo.admin_id && <button onClick={handleDelete}>DELETE</button>}
+                <table className="dateTable">
+                    <tr>
+                        <td>DATE</td>
+                        <td>HOST</td>
+                        <td>ADMIN</td>
+                    </tr>
+                    {dateList.map(date => {
+                        return (
+                            <TableRow
+                            key={date.id}
+                            date={date}         
+                            />
+                        )
+                    })}
 
-                        </div>
-                    ))}
+
+
+                </table>
+
 
             </div>
         </>
@@ -73,3 +86,11 @@ function MainPodPage() {
 }
 
 export default MainPodPage;
+
+// {dateList.map((date) => (
+//     <div key={date.id} className="dateDiv">
+//         <p>{date.date}</p>
+//         {user.id == podInfo.admin_id && <button onClick={handleDelete}>DELETE</button>}
+
+//     </div>
+// ))}
