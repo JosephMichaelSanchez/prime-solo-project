@@ -4,6 +4,7 @@ import user from './user.reducer';
 import podReducer from './pod.reducer.js';
 import mainPodReducer from './mainPod.reducer.js';
 import podInfoReducer from './podInfo.reducer.js';
+import setDatesReducer from './setDates.reducer.js';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   podReducer,
   mainPodReducer,
   podInfoReducer,
+  setDatesReducer,
 });
 
 export default rootReducer;

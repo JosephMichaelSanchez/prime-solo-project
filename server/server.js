@@ -13,7 +13,8 @@ const podRouter = require('./routes/pod.router');
 const joinRouter = require('./routes/join.router');
 const mainPodRouter = require('./routes/mainpod.router');
 const podInfoRouter = require('./routes/podInfo.router');
-const newDateRouter = require('./routes/newDate.router')
+const newDateRouter = require('./routes/newDate.router');
+const getDatesRouter = require('./routes/getDates.router');
 
 
 // Body parser middleware
@@ -34,6 +35,7 @@ app.use('/api/join', joinRouter);
 app.use('/api/mainpod', mainPodRouter);
 app.use('/api/podinfo', podInfoRouter);
 app.use('/api/newdate', newDateRouter);
+app.use('/api/dates', getDatesRouter);
 
 // Serve static files
 app.use(express.static('build'));
