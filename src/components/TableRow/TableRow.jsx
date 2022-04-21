@@ -18,7 +18,7 @@ function TableRow({ date }) {
 
     const handleRender = () => {
         if(date.host == 'NEEDS HOST') {
-            return 'NEEDS HOST'
+            return <button>NEEDS HOST</button>
 
         }
     }
