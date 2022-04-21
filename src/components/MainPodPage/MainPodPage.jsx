@@ -20,6 +20,10 @@ function MainPodPage() {
             type: 'GET_POD_INFO',
             payload: user.pod_id
         })
+        dispatch({
+            type: 'GET_DATES',
+            payload: podInfo.id
+        })
     }, [])
 
 
