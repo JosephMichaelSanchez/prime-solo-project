@@ -11,8 +11,9 @@ function* deleteDate(action) {
 
     try {
         yield axios.delete(`/api/delete/${date}`)
+        yield put({type: 'GET_DATES'})
     } catch {
-        console.log('ERROR DELETING DATE');
+        console.log('ERROR DELETING DATE IN SAGA');
         
     }
     
