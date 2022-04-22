@@ -29,6 +29,10 @@ function UserPage() {
         type: 'GET_DATES',
         payload: podInfo.id
     })
+
+    if (user.pod_id < 1) {
+      history.push('/podquestionpage')
+    }
 }, [])
 
   return (
