@@ -9,6 +9,7 @@ import podInfoSaga from './podInfo.saga';
 import newDateSaga from './newDate.saga';
 import getDatesSaga from './getDates.saga';
 import deleteDateSaga from './deleteDate.saga';
+import addHostSaga from './addHost.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -29,5 +30,6 @@ export default function* rootSaga() {
     newDateSaga(),
     getDatesSaga(),
     deleteDateSaga(),
+    addHostSaga(),
   ]);
 }
