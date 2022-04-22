@@ -11,7 +11,7 @@ function PodCreationPage() {
     const handleSubmit = () => {
         console.log('clicked');
 
-        newPod = {
+        const newPod = {
             pod_name: newPodName,
             key_code: keyCode
         }

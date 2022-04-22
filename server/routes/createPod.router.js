@@ -9,11 +9,11 @@ const {
 
     const id = req.user.id
     const query = `INSERT INTO pods ("pod_name", "key_code", "admin_id")
-    VALUES ($1, $2, $3) RETURNING "id";`;
+    VALUES ($1, $2, $3);`;
     const values = [req.body.pod_name, req.body.key_code, Number(id)]
     pool.query(query, values)
         .then(result => {
-            res.send(result.rows[0])
+            res.sendStatus(201)
         })
         .catch(err => {
             console.log('ERROR CREATING NEW POD', err);
