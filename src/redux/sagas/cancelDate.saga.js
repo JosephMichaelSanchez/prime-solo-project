@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-function* cancelDateSaga() {
-    yield takeLatest('ADD_NEW_HOST', cancelDate);
+function* cancelHostSaga() {
+    yield takeLatest('ADD_NEW_HOST', cancelHost);
 }
 
-function* cancelDate(action) {
-    console.log('in addHost');
+function* cancelHost(action) {
+    console.log('in cancelHost');
     const date = action.payload
     
     try {
@@ -15,9 +15,9 @@ function* cancelDate(action) {
         
         
     } catch {
-        console.log('ERROR IN CANCEL DATE SAGA');
+        console.log('ERROR IN CANCEL HOST SAGA');
         
     }
 }
 
-export default cancelDateSaga;
+export default cancelHostSaga;
