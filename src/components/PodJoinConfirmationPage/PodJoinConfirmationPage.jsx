@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './PodJoinConfirmationPage.css'
 import {useHistory} from 'react-router-dom';
+import swal from 'sweetalert';
+
 
 function PodJoinConfirmationPage() {
     const dispatch = useDispatch();
@@ -23,7 +25,18 @@ function PodJoinConfirmationPage() {
                 podId: podId
             }
         })
-        history.push('/mainpodpage');
+        dispatch({
+            type: 'FETCH_USER'
+        })
+
+        swal({
+            title: "Success!",
+            text: `You have joined ${podName} !`,
+            icon: "success",
+            button: "OK!",
+          });
+        
+          history.push('/user');
 
     }
 
