@@ -7,8 +7,6 @@ function* newDateSaga() {
 
 function* addNewDate(action) {
     console.log('IN NEW DATE');
-    console.log(action.payload);
-    
     
     try {
         yield axios.post('/api/newdate', action.payload);
