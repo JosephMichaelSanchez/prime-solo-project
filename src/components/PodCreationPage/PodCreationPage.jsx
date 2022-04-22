@@ -6,7 +6,9 @@ function PodCreationPage() {
 
     return (
         <>
-            <h2>THIS IS THE POD CREATION PAGE</h2>
+            <div className="body">
+                <h2>THIS IS THE POD CREATION PAGE</h2>
+            </div>
         </>
 
     )
