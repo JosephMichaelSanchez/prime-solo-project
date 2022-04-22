@@ -2,7 +2,7 @@ import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
 function* cancelHostSaga() {
-    yield takeLatest('ADD_NEW_HOST', cancelHost);
+    yield takeLatest('CANCEL_HOST', cancelHost);
 }
 
 function* cancelHost(action) {
