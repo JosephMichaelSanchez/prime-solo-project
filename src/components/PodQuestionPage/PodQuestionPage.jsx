@@ -28,6 +28,7 @@ function PodQuestionPage() {
                 <h3>Will you be joining an existing pod, or creating a new one?</h3>
                 <button onClick={handleSubmit}>JOINING A POD WITH THIS KEY CODE</button>
                 <input type="text" name="keyCode" placeholder='KEY CODE' onChange={(event) => setKeyCode(event.target.value)} />
+                <button>I WILL BE CREATING A NEW POD</button>
             </div>
         </>
     )
