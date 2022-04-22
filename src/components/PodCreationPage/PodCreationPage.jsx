@@ -6,9 +6,21 @@ function PodCreationPage() {
 
     const [newPodName, setNewPodName] = useState('')
     const [keyCode, setKeyCode] = useState('')
+    const dispatch = useDispatch();
 
     const handleSubmit = () => {
         console.log('clicked');
+
+        newPod = {
+            pod_name: newPodName,
+            key_code: keyCode
+        }
+
+        dispatch({
+            type:'CREATE_NEW_POD',
+            payload: newPod
+        })
+
     }
 
     return (
