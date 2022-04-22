@@ -25,6 +25,13 @@ function TableRow({ date }) {
         })
     }
 
+    const handleCancel = () => {
+        dispatch({
+            type: 'CANCEL_HOST',
+            payload: date.id
+        })
+    }
+
 
 
     return (
@@ -33,7 +40,7 @@ function TableRow({ date }) {
                 <td>{date.date}</td>
                 <td>{date.host == 'NEEDS HOST' ? <button onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
                 <td><button onClick={handleDelete}>DELETE</button></td>
-                <td>{date.host == user.last_name && <button>CANCEL</button>}</td>
+                <td>{date.host == user.last_name && <button onClick={handleCancel}>CANCEL</button>}</td>
             </tr>
         </>
     )
