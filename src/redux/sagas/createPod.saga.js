@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-function* podCreatorSaga() {
+function* createPodSaga() {
     yield takeLatest('CREATE_NEW_POD', createPod)
 }
 
@@ -17,4 +17,4 @@ function* createPod(action) {
 
 }
 
-export default podCreatorSaga;
+export default createPodSaga;

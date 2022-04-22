@@ -48,7 +48,7 @@ function PodCreationPage() {
                                 name="newkeycode"
                                 value={keyCode}
                                 placeholder='KEY CODE'
-                                onChange={(event) => setNewPodName(event.target.value)}
+                                onChange={(event) => setKeyCode(event.target.value)}
                             />
                         </label>
                     </div>
